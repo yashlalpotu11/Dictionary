@@ -1,5 +1,3 @@
-// import logo from "./images/logo.png";
-// import SearchEngine from "./SearchEngine.js";
 import "./App.css";
 
 export default function App() {
