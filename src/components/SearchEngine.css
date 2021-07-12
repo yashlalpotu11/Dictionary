@@ -1,0 +1,26 @@
+.SearchEngine form{
+    text-align: center;
+}
+.SearchEngine input{
+    padding: 5px 6px;
+    /* border-radius: 10px; */
+}
+.search-form{
+    width: 40%;
+}
+.search-button{
+    color: black;
+    background-color: seagreen;
+    width: 7%;
+    /* height: 40px;
+    width: 40px; */
+    border-radius: 3px;
+}
+.search-button:hover{
+    color: seagreen;
+    background-color: black;
+}
+.search{
+    font-size: 13px;
+    text-align: center;
+}
