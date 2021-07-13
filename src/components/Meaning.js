@@ -7,7 +7,7 @@ const Meaning = (props) =>{
     return(
         <div className="Meaning">
             {" "}
-            <h3>{props.meaning.partOfSpeech}</h3>
+            <h2>{props.meaning.partOfSpeech}</h2>
             <div className="row">
               <div className="col-11">
                 {props.meaning.definitions.map(function(definition, index){

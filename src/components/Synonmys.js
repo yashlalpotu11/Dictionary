@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Synonmys = (props) =>{
-    if(props.synonmys){
+    if(props.synonyms){
         return (
             <div className="Synonyms">
                 <strong>Synonyms :</strong>

@@ -1,11 +1,19 @@
+.Results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .Results section{
-    background: seashell;
+    background: rgb(238, 236, 235);
     border-radius: 7px;
     padding: 5px 10px;
     margin: 20px;
-    max-width: 70%;
-    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
 }
-.Results h2{
+.Results h1{
     display: inline;
+    color: rgb(104, 94, 94);
+    text-transform: uppercase;
 }

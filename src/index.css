@@ -1,6 +1,7 @@
+
 body {
   background-size: cover;
   background-image: url("./images/background.jpg");
   background-attachment: fixed;
-  font-family: "Times New Roman", Times, serif;
+  /* font-family: "Times New Roman", Times, serif; */
 }
