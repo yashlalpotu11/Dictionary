@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from "axios"
 import './SearchEngine.css'
 import Results from './Results'
+import Loading from './Loading'
 
 const SearchEngine = (props) =>{
 
@@ -14,33 +15,22 @@ const SearchEngine = (props) =>{
     }
 
     function handleResponse(response){
-        // if(response.title === "No Definitions Found"){
-        //     console.log(response.title);
-        //     setResults(response.title);
-        // }
-        // else{
-        //     console.log(response.data[0]);
-        //     setResults(response.data[0]);
-        // }
         if(response.data){
             console.log(response.data[0]);
             setResults(response.data[0]);
         }
-        else{
-            console.log(response.title);
-            setResults(response.title);
-        }
+        
     }
 
     function search(){
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${wordInput}`;
         axios.get(apiUrl).then(handleResponse);
+        setLoaded(true);
     }
 
     function handleSubmit(e){
         e.preventDefault();
         search();
-        // setWordInput(" ");
     }
 
 
@@ -51,30 +41,16 @@ const SearchEngine = (props) =>{
     if(loaded){
         return (
             <>
-                {/* <div className="SearchEngine">
-                    <form onSubmit={handleSubmit}>
-                        <input 
-                            type="search"
-                            className="search-form"
-                            placeholder="Type a word or phrase"
-                            onChange={handleWordInput}
-                        />
-                        <input type="submit" value="search" className="search-button"/>
-                    </form>
-                    <div className="source">
-                        <a href="https://github.com/yashlalpotu11/Dictionary">Open Source</a>
-                        {" "} by Yash Lalpotu
-                    </div>
-                </div> */}
                 <div className="SearchEngine">
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-row">
+                    <form onSubmit={handleSubmit}> <Loading/>
+                        <div className="form-row"> 
                             <input type="search" onChange={handleWordInput} className="form-control" placeholder="Type a word or phrase"/>
                             <button type="submit" value="search" className="btn btn-success">Search</button>
                         </div>
                     </form>
                 </div>
-                <Results results={results}/>
+                {/* <Results results={results}/> */}
+                {loaded ? <Results results={results}/> : <Loading/> }
             </>
         );
     }

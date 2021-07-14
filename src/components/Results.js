@@ -2,16 +2,17 @@ import React from 'react'
 import Meaning from './Meaning'
 import Phonetic from './Phonetic'
 import './Results.css'
+import Loading from './Loading'
 
 const Results = (props) =>{
-    // console.log(props.results.title);
+    
     if(props.results){
         return(
             <>
                 <div className="Results">
-                {/* <h1>{props.results.title}</h1> */}
                     <section>
                         <h1>{props.results.word}</h1>
+
                         {props.results.phonetics.map(function(phonetic, index){
                             return(
                                 <h1 key={index}>
@@ -27,13 +28,14 @@ const Results = (props) =>{
                             </section>
                         )
                     })}
+                    {/* <NotFound/> */}
                 </div>
             </>
         )
     }
     else{
-        console.log("does not found");
-        return null;
+        // console.log("does not found");
+        return <Loading/>;
     }
 }
 export default Results;
