@@ -1,7 +1,10 @@
 import logo1 from "./images/dictionary.png";
 import SearchEngine from "./components/SearchEngine.js";
 import "./App.css";
+
 // import Loading from './components/Loading'
+
+
 
 export default function App() {
   return (

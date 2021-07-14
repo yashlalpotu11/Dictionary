@@ -2,7 +2,7 @@ import React from 'react'
 import Meaning from './Meaning'
 import Phonetic from './Phonetic'
 import './Results.css'
-import Loading from './Loading'
+
 
 const Results = (props) =>{
     
@@ -35,7 +35,7 @@ const Results = (props) =>{
     }
     else{
         // console.log("does not found");
-        return <Loading/>;
+        return null;
     }
 }
 export default Results;
