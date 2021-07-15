@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import axios from "axios"
 import './SearchEngine.css'
 import Results from './Results'
+// import { ToastContainer, toast } from "react-toastify";
+// import '../../node_modules/react-toastify/dist/ReactToastify.css';
 // import Loading from './Loading'
 
 const SearchEngine = (props) =>{
@@ -9,6 +11,7 @@ const SearchEngine = (props) =>{
     const[wordInput, setWordInput] = useState(props.defaultKeyword);
     const[loaded, setLoaded] = useState(false);
     const[results, setResults] = useState(null);
+    // const[fine, setFine] = useState("");
 
     function handleWordInput(e){
         setWordInput(e.target.value);
@@ -18,7 +21,7 @@ const SearchEngine = (props) =>{
         if(response.data){
             console.log(response.data[0]);
             setResults(response.data[0]);
-            // setFine("yash");
+            // setFine("okay");
         }
         
     }
@@ -39,7 +42,7 @@ const SearchEngine = (props) =>{
     }
 
     // if(fine){
-    //     return toast("fine", { type: "success" }); 
+    //     return toast("Fine", { type: "info" });
     // }
 
     if(loaded){

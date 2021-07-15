@@ -28,13 +28,11 @@ const Results = (props) =>{
                             </section>
                         )
                     })}
-                    {/* <NotFound/> */}
                 </div>
             </>
         )
     }
     else{
-        // console.log("does not found");
         return null;
     }
 }
